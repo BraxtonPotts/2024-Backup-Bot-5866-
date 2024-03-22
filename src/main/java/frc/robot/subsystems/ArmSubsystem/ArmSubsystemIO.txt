@@ -1,0 +1,20 @@
+package frc.robot.subsystems.ArmSubsystem;
+
+
+/** Add your docs here. */
+public interface ArmSubsystemIO {
+    class ArmIOInputs {
+        public boolean isBrake;
+        public double curent;
+        public double curentAngle;
+        public double velocity;
+        public double targetAngle;
+        public double appliedPower;
+        public double relativePos_l;
+        public double relativePos_r;
+    }
+
+    default void updateInputs(ArmIOInputs inputs){}
+    default void setBreakMode(boolean isBrake){}
+    static void setAngle(double angle){}
+}
